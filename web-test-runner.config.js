@@ -1,6 +1,5 @@
 import { esbuildPlugin } from "@web/dev-server-esbuild";
 import { playwrightLauncher } from "@web/test-runner-playwright";
-import { fileURLToPath } from "url";
 
 const launchOptions = {
   headless: true,
@@ -11,12 +10,16 @@ const launchOptions = {
 const config = {
   files: ["test/**/*.test.ts"],
   nodeResolve: true,
+  mimeTypes: {
+    ".jpg": "image/jpg",
+    ".png": "image/png",
+    ".gif": "image/gif",
+  },
   plugins: [
     esbuildPlugin({
       ts: true,
       js: true,
       target: "auto",
-      loaders: { ".jpg": "file", ".gif": "file", ".png": "file" },
     }),
   ],
   concurrency: 3,
