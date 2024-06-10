@@ -1,9 +1,23 @@
 {
-  "name": "browser-image-size",
-  "module": "index.ts",
+  "name": "@code1x1/browser-image-size-checker",
+  "version": "1.0.2",
+  "module": "dist/index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "url": "https://github.com/code1x1/browser-image-size-checker"  
+  },
   "type": "module",
   "scripts": {
-    "test": "web-test-runner --config web-test-runner.config.js"
+    "test": "web-test-runner --config web-test-runner.config.js",
+    "build": "tsc -p .",
+    "prepack": "bun run build"
   },
   "devDependencies": {
     "@esm-bundle/chai": "^4.3.4-fix.0",

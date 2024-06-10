@@ -1,4 +1,4 @@
-# browser-image-size
+# @code1x1/browser-image-size-checker
 
 To install dependencies:
 

@@ -15,7 +15,6 @@ const config = {
     esbuildPlugin({
       ts: true,
       js: true,
-      tsconfig: fileURLToPath(new URL("./tsconfig.json", import.meta.url)),
       target: "auto",
       loaders: { ".jpg": "file", ".gif": "file", ".png": "file" },
     }),
