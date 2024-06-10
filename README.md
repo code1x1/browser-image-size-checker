@@ -1,5 +1,22 @@
 # @code1x1/browser-image-size-checker
 
+Zero dependencies image size checker.
+
+## Requires 
+
+* URL.createObjectURL
+* document.createElement
+* Promise
+
+## Usage
+
+```js
+const { width, height } = await imageSize(image);
+const { width, height } = await imageSize(link);
+```
+
+## Development
+
 To install dependencies:
 
 ```bash
