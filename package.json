@@ -1,10 +1,22 @@
 {
   "name": "@code1x1/browser-image-size-checker",
-  "version": "1.0.5",
-  "module": "dist/index.ts",
+  "version": "1.0.7",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "jpg", 
+    "gif", 
+    "png", 
+    "image",
+    "picture",
+    "photo",
+    "type",
+    "detect",
+    "check"
   ],
   "license": "LGPL-3.0-or-later",
   "publishConfig": {
@@ -17,7 +29,7 @@
   "type": "module",
   "scripts": {
     "test": "web-test-runner --config web-test-runner.config.js",
-    "build": "tsc -p .",
+    "build": "tsc -p .; esbuild --minify --format=cjs --loader=ts < src/index.ts >dist/index.cjs",
     "prepack": "bun run build"
   },
   "devDependencies": {
