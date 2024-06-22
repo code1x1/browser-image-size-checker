@@ -1,0 +1,11 @@
+{
+    "name": "@code1x1/browser-image-size-checker",
+    "version": "1.0.7",
+    "exports": "./src/index.ts",
+    "publish": {
+        "include": [
+            "README.md",
+            "src/**/*.ts"
+        ]
+    }
+}
