@@ -1,3 +1,4 @@
+/** This function takes a file via link or blob and returns width and height. */
 export function imageSize(
   image: File | Blob | string
 ): Promise<{ width: number; height: number }> {
